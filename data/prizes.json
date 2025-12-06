@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Grand Prize",
+    "name_vi": "Giải Đặc Biệt",
+    "quantity": 1
+  },
+  {
+    "id": 2,
+    "name": "Second Prize",
+    "name_vi": "Giải Nhì",
+    "quantity": 2
+  },
+  {
+    "id": 3,
+    "name": "Third Prize",
+    "name_vi": "Giải Ba",
+    "quantity": 3
+  },
+  {
+    "id": 4,
+    "name": "Consolation Prize",
+    "name_vi": "Giải Khuyến Khích",
+    "quantity": 5
+  }
+]
