@@ -72,15 +72,25 @@ export class SlotMachine {
     });
   }
 
+  getReelHeight() {
+    // Get actual reel height from CSS (responsive)
+    if (this.reels.length > 0 && this.reels[0].element) {
+      return this.reels[0].element.offsetHeight || 160;
+    }
+    return 160;
+  }
+
   setReelNumber(reel, number) {
-    const offset = number * 160; // Each number is 160px tall (card style)
+    const height = this.getReelHeight();
+    const offset = number * height;
     reel.strip.style.transform = `translateY(-${offset}px)`;
     reel.strip.style.transition = 'transform 0.3s ease-out';
     reel.currentNumber = number;
   }
 
   setReelNumberInstant(reel, number) {
-    const offset = number * 160;
+    const height = this.getReelHeight();
+    const offset = number * height;
     reel.strip.style.transition = 'none';
     reel.strip.style.transform = `translateY(-${offset}px)`;
     reel.currentNumber = number;
